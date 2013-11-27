@@ -188,11 +188,11 @@ hljs.initHighlightingOnLoad();
 
 <h2>An example - Afganistan and Pakistan</h2>
 
-<p>As an example, let us estimate this for Afganistan Pakistan using the failed state index for 2013 and the distance between Karachi and Kabul.</p>
+<p>As an example, let us estimate this for Afganistan Pakistan using the failed state index for 2013 and the distance between Karachi and Kabul (in 1,000 km).</p>
 
 <pre><code class="r">Afg = 106.7
 Pak = 102.9
-distAP = 1091.76
+distAP = 1.09176
 </code></pre>
 
 <p>The FSI should be normalised using z-scores.</p>
@@ -215,11 +215,11 @@ AfgZ
 
 <p>Now we estimate the index:</p>
 
-<pre><code class="r">IndAP &lt;- (AfgZ * PakZ)/distAP
+<pre><code class="r">IndAP &lt;- (Afg * Pak)/distAP
 IndAP
 </code></pre>
 
-<pre><code>## [1] 0.001945
+<pre><code>## [1] 10057
 </code></pre>
 
 <h2>A comparison, Finland and Sweden</h2>
@@ -228,7 +228,7 @@ IndAP
 
 <pre><code class="r">Fin = 18
 Swe = 19.7
-distFS = 1091.76
+distFS = 0.3959
 </code></pre>
 
 <p>The FSI should be normalised using z-scores.</p>
@@ -249,11 +249,11 @@ FinZ
 
 <p>Estimate the index</p>
 
-<pre><code class="r">IndFS &lt;- (FinZ * SweZ)/distFS
+<pre><code class="r">IndFS &lt;- (Fin * Swe)/distFS
 IndFS
 </code></pre>
 
-<pre><code>## [1] 0.004423
+<pre><code>## [1] 895.7
 </code></pre>
 
 </body>
