@@ -1,4 +1,4 @@
-Failed-State-Gravity
+Failed State Gravity Model
 =================================
 Bastiaan Quast and Daniel Norfolk
 ---------------------------------
