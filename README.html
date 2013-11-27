@@ -192,7 +192,7 @@ hljs.initHighlightingOnLoad();
 
 <pre><code class="r">Afg = 106.7
 Pak = 102.9
-dist = 1091.76
+distAP = 1091.76
 </code></pre>
 
 <p>The FSI should be normalised using z-scores.</p>
@@ -215,11 +215,45 @@ AfgZ
 
 <p>Now we estimate the index:</p>
 
-<pre><code class="r">Ind &lt;- (AfgZ * PakZ)/dist
-Ind
+<pre><code class="r">IndAP &lt;- (AfgZ * PakZ)/distAP
+IndAP
 </code></pre>
 
 <pre><code>## [1] 0.001945
+</code></pre>
+
+<h2>A comparison, Finland and Sweden</h2>
+
+<p>Input the data</p>
+
+<pre><code class="r">Fin = 18
+Swe = 19.7
+distFS = 1091.76
+</code></pre>
+
+<p>The FSI should be normalised using z-scores.</p>
+
+<pre><code class="r">FinZ &lt;- (Fin - mean)/stDev
+SweZ &lt;- (Swe - mean)/stDev
+FinZ
+</code></pre>
+
+<pre><code>## [1] -2.234
+</code></pre>
+
+<pre><code class="r">SweZ
+</code></pre>
+
+<pre><code>## [1] -2.162
+</code></pre>
+
+<p>Estimate the index</p>
+
+<pre><code class="r">IndFS &lt;- (FinZ * SweZ)/distFS
+IndFS
+</code></pre>
+
+<pre><code>## [1] 0.004423
 </code></pre>
 
 </body>

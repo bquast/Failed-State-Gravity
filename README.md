@@ -17,7 +17,7 @@ As an example, let us estimate this for Afganistan Pakistan using the failed sta
 ```r
 Afg = 106.7
 Pak = 102.9
-dist = 1091.76
+distAP = 1091.76
 ```
 
 
@@ -49,11 +49,57 @@ Now we estimate the index:
 
 
 ```r
-Ind <- (AfgZ * PakZ)/dist
-Ind
+IndAP <- (AfgZ * PakZ)/distAP
+IndAP
 ```
 
 ```
 ## [1] 0.001945
+```
+
+
+A comparison, Finland and Sweden
+--------------------------------
+Input the data
+
+
+```r
+Fin = 18
+Swe = 19.7
+distFS = 1091.76
+```
+
+
+The FSI should be normalised using z-scores.
+
+
+```r
+FinZ <- (Fin - mean)/stDev
+SweZ <- (Swe - mean)/stDev
+FinZ
+```
+
+```
+## [1] -2.234
+```
+
+```r
+SweZ
+```
+
+```
+## [1] -2.162
+```
+
+
+Estimate the index
+
+```r
+IndFS <- (FinZ * SweZ)/distFS
+IndFS
+```
+
+```
+## [1] 0.004423
 ```
 
